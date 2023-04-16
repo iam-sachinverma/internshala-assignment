@@ -68,10 +68,11 @@ if(isset($_POST['booking'])){
          <br>
 
          <?php
-            $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
-            $select_profile->execute([$customer_id]);
-            if($select_profile->rowCount() > 0){
-               $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+            // $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
+            // $select_profile->execute([$customer_id]);
+
+            if(isset($_SESSION['customer_id'])){
+               // $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
          ?>
 
             <div class="options">
@@ -91,7 +92,7 @@ if(isset($_POST['booking'])){
             <div class="flex-btn">
             
                <?php
-               if($fetch_profile['user_type'] == 'agency') {         
+               if(isset($_SESSION['agency_id'])) {         
             ?>
                <input value="Booking Vehicle" name="booking" class="btn" onclick="return confirm('Car agency cannot booked car');">
             <?php } else { ?>

@@ -26,7 +26,6 @@ if(!isset($_SESSION['agency_id'])){
                
         ?>
 
-
                 <?php 
                     if($fetch_vehicle = $vehicle_details->fetch(PDO::FETCH_ASSOC)){
                 ?>

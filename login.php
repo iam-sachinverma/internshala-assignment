@@ -16,11 +16,13 @@ if(isset($_POST['submit'])){
    if($select_user->rowCount() > 0){
 
       if($row['user_type'] == 'customer'){
+         echo $row['user_type'] == 'customer';
+         header('location:index.php');
          $_SESSION['customer_id'] = $row['id'];
-         header('location:index.php');
       }else if($row['user_type'] == 'agency'){
-         $_SESSION['agency_id'] = $row['id'];
+         echo $row['user_type'] == 'agencyr';
          header('location:index.php');
+         $_SESSION['agency_id'] = $row['id'];
       }
 
    }else{
@@ -58,8 +60,6 @@ if(isset($_POST['submit'])){
       <p>OR</p>
       <br>
       <p>Don't have an account? </p>
-
-      <button onclick="myFunction()">Show Snackbar</button>
 
       <a href="register.php">
          <button class="btn" style="background: #F5EA5A;" type="button">Register As Customer</button>
