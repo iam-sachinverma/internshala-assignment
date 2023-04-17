@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
 ?>
 
 <!-- Main Content -->
-<section class="form-container">
+<section class="form-container ">
 
    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);  ?>" method="POST">
       
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
       <br>
       <p>Already have an account? <a href="login.php">Login</a></p>
       <br>
-      <input type="submit" value="register now" name="submit" class="btn">
+      <input type="submit" value="register now" name="submit" class="btn btn btn-success">
 
    </form>
 

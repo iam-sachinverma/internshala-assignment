@@ -53,19 +53,19 @@ if(isset($_POST['publish'])){
          }
       ?>
       
-      <p>Enter Vehicle Model <span>*</span></p>
+      <!-- <p>Enter Vehicle Model <span>*</span></p> -->
       <input type="text" name="vehicle_model" maxlength="100" required placeholder="add vehicle model" class="box">
-      <p>Enter Vehicle Number <span>*</span></p>
+      <!-- <p>Enter Vehicle Number <span>*</span></p> -->
       <input type="text" name="vehicle_number" maxlength="100" required placeholder="add vehicle number" class="box">
-      <p>Enter Seating Capacity<span>*</span></p>
+      <!-- <p>Enter Seating Capacity<span>*</span></p> -->
       <input type="number" name="seating_capacity" maxlength="100" required placeholder="add vehicle sitting capacity" class="box">
-      <p>Enter Rent for One Day</p>
+      <!-- <p>Enter Rent for One Day</p> -->
       <input type="number" name="rent" required placeholder="add per day rent" class="box" />
       <!-- agency input -->
       <input type="hidden" name="agency_id" value="<?= $_SESSION['agency_id'] ?>">
      
       <div class="flex-btn">
-         <input type="submit" value="publish vehicle" name="publish" class="btn" required>
+         <input type="submit" value="Publish vehicle" name="publish" class="btn btn-success" required>
       </div>
     </form>
 

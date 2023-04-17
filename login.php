@@ -36,14 +36,14 @@ if(isset($_POST['submit'])){
 <!-- Main Content -->
 <section class="form-container">
 
-   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);  ?>" method="post">
+   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);  ?>" method="post" class="my-4">
       <h3>Login</h3>
 
       <?php
          if(isset($message)){
             foreach($message as $message){
                echo '
-               <div class="message">
+               <div class="message p-3 bg-red te">
                   <span>'.$message.'</span>
                   <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
                </div>
@@ -54,19 +54,23 @@ if(isset($_POST['submit'])){
 
       <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="enter your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="login now" name="submit" class="btn">
+      <input type="submit" value="login now" name="submit" class="btn btn-primary block">
 
-      <br>
       <p>OR</p>
-      <br>
       <p>Don't have an account? </p>
 
-      <a href="register.php">
+      <div class="mb-2"> 
+         <a href="register.php">
          <button class="btn" style="background: #F5EA5A;" type="button">Register As Customer</button>
-      </a>
+         </a>
+      </div> 
+      <div> 
+
       <a href="agency_register.php">
          <button class="btn" style="background: #B2A4FF;" type="button">Register As Car Agency</button>
       </a>
+      </div> 
+
    </form>
 
 </section>

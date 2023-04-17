@@ -1,0 +1,61 @@
+:root {
+  --main-color: #4834d4;
+  --red: #e74c3c;
+  --orange: #f39c12;
+  --black: #34495e;
+  --white: #fff;
+  --light-bg: #f5f5f5;
+  --light-color: #999;
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 16rem);
+}
+
+.form-container form {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+}
+
+.form-container form h3 {
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.form-container form p {
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  color: var(--light-color);
+}
+
+.form-container form p a {
+  color: var(--orange);
+}
+
+.form-container form p a:hover {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.form-container form .box {
+  width: 100%;
+  background-color: var(--light-bg);
+  padding: 0.4rem;
+  font-size: 1rem;
+  color: var(--black);
+  margin: 1rem 0;
+  border: var(--border);
+  border-radius: 0.5rem;
+}
